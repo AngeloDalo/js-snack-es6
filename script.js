@@ -6,10 +6,14 @@ const numeri = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 const numberA = 4;
 const numberB = 13;
 
-const interni = numeri.filter ((numero) => {
-    if (numero>=numberA && numero<=numberB) {
-        return true;
-    }
-});
+function select (array, a, b) {
+    const interni = array.filter ((numero) => {
+        if (numero>=a && numero<=b) {
+            return true;
+        }
+    });
+    return interni;
+}
 
+let interni = select(numeri, numberA, numberB);
 console.log(interni);
